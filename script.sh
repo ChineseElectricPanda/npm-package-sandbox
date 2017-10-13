@@ -33,5 +33,5 @@ lib();" > server.js
 # Build and run the docker container, kill everything when it's done
 (sudo docker build --no-cache -t "test" . && sudo docker run test ; kill "$$") &
 # Kill everything if it runs for more than 5 minutes
-(sleep 5m && kill "$$")
+(sleep 5m && kill "$$") &
 wait
